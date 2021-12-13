@@ -1,9 +1,13 @@
 
-img{
-    width: 200px;
-    margin: auto;
+profile{
+    height: 200px;
 }
 
+/*img{*/
+/*    width: auto;*/
+/*    margin: auto;*/
+/*}*/
+
 h1{
-    color: aqua;
+    font-size: smaller;
 }

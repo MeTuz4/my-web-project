@@ -7,23 +7,39 @@
     <meta name="description" content="Ну в принципе - это сайт про меня любимого)">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--    <link href="outlines.css" rel="stylesheet">-->
-    <!--    <link href="main_page.css" rel="stylesheet">-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
+    <link href="main_page.css" rel="stylesheet">
 </head>
 <body class="bg-dark">
 <!--#343a40-->
+
+<script>
+    function show(elementID) {
+        var element = document.getElementById(elementID)
+        if (!element) {
+            alert("no element")
+        }
+
+        var pages = document.getElementsByClassName("page")
+        for (let i = 0; i < pages.length; i++) {
+            pages[i].style.display = 'none'
+        }
+
+        element.style.display = 'block'
+    }
+</script>
 
 <header>
     <div class="container-fluid">
         <nav class="navbar  navbar-expand-lg navbar-dark bg-dark">
             <a class="profile navbar-brand" href="#">PROфиль</a>
             <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link" href="#">Обо мне</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Список языков программирования</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#" onclick=show("page1")>Обо мне</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" onclick=show("page2")>Список языков программирования</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Страны в которых я был</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Тут игры</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Тут музыка</a></li>
@@ -32,89 +48,107 @@
     </div>
 </header>
 <main>
-    <section class="container-fluid biography" style="background-color: #1D568F">
-        <h3>Андрей Дмитриевич Друзин</h3>
-        <h6>или сокращенно АДД</h6>
-        <h4 class="biography__title">Биография (standard edition)</h4>
-        <h6>Какое красивое слово для того, кто особо ничего не добился</h6>
-        <h5 class="row biography__text">
-            <div class="row biography__text_string">
-                <p class="col-lg-9">
-                    Зовут меня Андрей.
-                    Родился я в 2001 году весной в солнечном Санкт-Петербурге, а если конкретнее, то в
-                    четверг.
-                </p>
-                <div class="col-lg-3">
-                    <img class="img-fluid"
-                         src="https://s.poembook.ru/theme/0b/c5/84/7a7c3b4193e50d8377a98c300937edbfeb70d1d1.jpeg"
-                         alt="Здесь должна быть красивая картинка">
+    <div class="page" id="page1" style="display: block">
+        <section class="container-fluid biography" style="background-color: #1D568F">
+            <h3 style="color: aliceblue">Андрей Дмитриевич Друзин</h3>
+            <h6 style="color: aliceblue">или сокращенно АДД</h6>
+            <h4 class="biography__title" style="color: aliceblue">Биография (standard edition)</h4>
+            <h6 style="color: aliceblue">Какое красивое слово для того, кто особо ничего не добился</h6>
+            <h5 class="row biography__text" style="color: aliceblue">
+                <div class="row biography__text_string">
+                    <p class="col-lg-9">
+                        Зовут меня Андрей.
+                        Родился я в 2001 году весной в солнечном Санкт-Петербурге, а если конкретнее, то в
+                        четверг.
+                    </p>
+                    <div class="col-lg-3">
+                        <img class="img-fluid"
+                             src="https://s.poembook.ru/theme/0b/c5/84/7a7c3b4193e50d8377a98c300937edbfeb70d1d1.jpeg"
+                             alt="Здесь должна быть красивая картинка">
+                    </div>
                 </div>
-            </div>
-            <div class="row biography__text_string">
-                <p class="col-lg-9 col-lg-push-3">
-                    В детском саду и школе отличался
-                    <a class="biography__youtube_link" href="https://www.youtube.com/watch?v=UPS1yDHQwL8">добротой</a>
-                    и отзывчивостью.
-                    С самого детства играл в игры (цифровые и настольные).
-                    Учился я хорошо, у меня хорошо получались такие предметы, как математика и физика.
-                    Чего не скажешь про русский и литературу.
-                </p>
-                <div class="col-lg-3 col-lg-pull-9">
-                    <img class="img-fluid"
-                         src="https://i.pinimg.com/originals/1a/7a/d3/1a7ad320494572d1d02361477b366496.png"
-                         alt="Здесь должна быть красивая картинка">
+                <div class="row biography__text_string">
+                    <div class="col-lg-3">
+                        <img class="img-fluid"
+                             src="https://i.pinimg.com/originals/1a/7a/d3/1a7ad320494572d1d02361477b366496.png"
+                             alt="Здесь должна быть красивая картинка">
+                    </div>
+                    <p class="col-lg-9">
+                        В детском саду и школе отличался
+                        <a class="biography__youtube_link" href="https://www.youtube.com/watch?v=UPS1yDHQwL8"
+                           style="color: aliceblue; text-decoration: none">добротой</a>
+                        и отзывчивостью.
+                        С самого детства играл в игры (цифровые и настольные).
+                        Учился я хорошо, у меня хорошо получались такие предметы, как математика и физика.
+                        Чего не скажешь про русский и литературу.
+                    </p>
                 </div>
-            </div>
-            <div class="row biography__text_string">
-                <p class="col-lg-9">
-                    Но у меня есть главная проблема - это <b>лень</b>.
-                    Она так много чего мне попортила. Но без неё никак. :)
-                </p>
-                <p class="col-lg-3">
-                    <img class="img-fluid"
-                         src="https://pbs.twimg.com/media/ER35TeXWsAAipQt.jpg:large"
-                         alt="Здесь должна быть красивая картинка">
-            </div>
-            </div>
-            <div class="row biography__text_string">
-                <div class="col-lg-3">
-                    <img class="img-fluid"
-                         src="https://s.fishki.net/upload/users/2021/06/19/1244339/30145b1e2a8934504a3b68daac5efe1c.jpg"
-                         alt="Здесь должна быть красивая картинка">
+                <div class="row biography__text_string">
+                    <p class="col-lg-9">
+                        Но у меня есть главная проблема - это <b>лень</b>.
+                        Она так много чего мне попортила. Но без неё никак. :)
+                    </p>
+                    <div class="col-lg-3">
+                        <img class="img-fluid"
+                             src="https://pbs.twimg.com/media/ER35TeXWsAAipQt.jpg:large"
+                             alt="Здесь должна быть красивая картинка">
+                    </div>
                 </div>
-                <p class="col-lg-9">
-                    Вот такая кратенькая история привела меня в программирование в классе 7-8.
-                    Но моих успехов в этом деле почти не было, спасибо моей огромной лени.
-                    Так я не так успешно сдал олимпиады и Егэ тоже провисло в районе русского.
-                    На бюджет не попал. Зато поступил в университет, в который хотел.
-                    Где я стал усерднее изучать разные языки программирования.
-                </p>
-            </div>
-            <div class="row biography__text_string">
-                <p class="col-lg-9">
-                    Очень люблю медуз, от этого и взял себе ник MeTuza, Meduza или что-то подобное
-                </p>
-                <p class="col-lg-3">
-                    <img class="img-fluid"
-                         src="https://i.pinimg.com/originals/fe/4b/c3/fe4bc367c796f800a0897599c2ba2022.gif"
-                         alt="Здесь должна быть очень красивая гифка">
-            </div>
-            </div>
-        </h5>
-    </section>
-    <section class="programing-language">
-        <h3 class="programing-language__title">Языки программирования, которые знаю:</h3>
-        <ul class="programing-language__list">
-            <li>Java</li>
-            <li>C++</li>
-            <li>Python</li>
-            <li>Bash</li>
-        </ul>
-    </section>
-    <section class="symbolic-art">
-        <article>
-            <h3 class="symbolic-art__title">Встречайте Гусь-Гидру</h3>
-            <pre class="symbolic-art__art">
+
+                <div class="row biography__text_string">
+                    <div class="col-lg-3">
+                        <img class="img-fluid"
+                             src="https://s.fishki.net/upload/users/2021/06/19/1244339/30145b1e2a8934504a3b68daac5efe1c.jpg"
+                             alt="Здесь должна быть красивая картинка">
+                    </div>
+                    <p class="col-lg-9">
+                        Вот такая кратенькая история привела меня в программирование в классе 7-8.
+                        Но моих успехов в этом деле почти не было, спасибо моей огромной лени.
+                        Так я не так успешно сдал олимпиады и Егэ тоже провисло в районе русского.
+                        На бюджет не попал. Зато поступил в университет, в который хотел.
+                        Где я стал усерднее изучать разные языки программирования.
+                    </p>
+                </div>
+                <div class="row biography__text_string">
+                    <p class="col-lg-9">
+                        Очень люблю медуз, от этого и взял себе ник MeTuza, Meduza или что-то подобное
+                    </p>
+                    <p class="col-lg-3">
+                        <img class="img-fluid"
+                             src="https://i.pinimg.com/originals/fe/4b/c3/fe4bc367c796f800a0897599c2ba2022.gif"
+                             alt="Здесь должна быть очень красивая гифка">
+                </div>
+            </h5>
+        </section>
+    </div>
+    <div class="page" id="page2" style="display: none">
+        <section class="programing-language" style="background-color: #1D568F">
+            <h3 class="programing-language__title" style="color: aliceblue">Языки программирования, которые знаю:</h3>
+            <ul class="programing-language__list" style="color: aliceblue">
+                <li>Java</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>Bash</li>
+            </ul>
+        </section>
+        <section class="code"  style="background-color: #1D568F">
+            <article style="color: aliceblue">
+                <h4>Фрагмент моего кода</h4>
+                <pre>
+                <code>
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("HelloWorld!!!");
+    }
+}
+                </code>
+            </pre>
+            </article>
+        </section>
+        <section class="symbolic-art" style="background-color: #1D568F">
+            <article>
+                <h3 class="symbolic-art__title" style="color: aliceblue">Встречайте Гусь-Гидру</h3>
+                <pre class="symbolic-art__art" style="color: aliceblue">
 ░░░░░░▄▀▀▀▄░░░░░░░░
 ▄███▀░◐░▄▀▀▀▄░░░░░░
 ░░▄███▀░◐░░░░▌░░░
@@ -131,36 +165,23 @@
 ░░░░░░░░░░░▌▌░▌▌░░░░░
 ░░░░░░░░░▄▄▌▌▄▌▌░░░░░
             </pre>
-        </article>
-    </section>
+            </article>
+        </section>
+    </div>
     <section class="quote">
         <article>
             <h3>Цитаты великих людин</h3>
             <q>Не откладывай на завтра, то что можно сделать послезавтра</q>
         </article>
     </section>
-    <section class="code">
-        <article>
-            <h4>Фрагмент моего кода</h4>
-            <pre>
-                <code>
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("HelloWorld!!!");
-    }
-}
-                </code>
-            </pre>
-        </article>
-    </section>
     <aside>Здесь могла быть ваша реклама, но её нет, какая жалось</aside>
 </main>
 <footer>
-    <h4>Контактный номер - по ссылке
-        <img class="img-fluid" src="https://pbs.twimg.com/media/ETPXcBvWsAAzWjZ.jpg" alt="Здесь должна быть картинка">
-    </h4>
-    <h5>2001-2021</h5>
-    <h6>Используя этот сайт, вы даёте согласие на пользование вашей души демонами из ада</h6>
+    <div >
+        <h4>Контактный номер - по <a href="https://pbs.twimg.com/media/ETPXcBvWsAAzWjZ.jpg">ссылке</a></h4>
+        <h5>2001-2021</h5>
+        <h6>Используя этот сайт, вы даёте согласие на пользование вашей души демонами из ада</h6>
+    </div>
 </footer>
 </body>
 </html>

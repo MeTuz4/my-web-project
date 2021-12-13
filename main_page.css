@@ -1,13 +1,13 @@
 
-profile{
-    height: 200px;
-}
-
-/*img{*/
-/*    width: auto;*/
+/*img {*/
+/*    width: 200px;*/
 /*    margin: auto;*/
 /*}*/
 
-h1{
-    font-size: smaller;
+/*h1 {*/
+/*    color: aqua;*/
+/*}*/
+
+biography__youtube_link {
+    text-decoration: none;
 }

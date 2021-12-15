@@ -13,11 +13,12 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
     <link href="main_page.css" rel="stylesheet">
+    <script src="add to table.js"></script>
 </head>
 <body class="bg-dark">
 <section>
     <div class="table-responsive">
-        <table class="table table-dark table-bordered table-hover">
+        <table class="table table-dark table-bordered table-hover" id="music_table">
             <thead>
             <tr>
                 <th>Исполнитель</th>
@@ -36,13 +37,11 @@
                 <td>Алиса</td>
                 <td>Инок, воин и шут</td>
             </tr>
-            <template id="table-string__template">
-                <tr>
-                    <td id="table-singer__template"></td>
-                    <td id="table-group__template"></td>
-                    <td id="table-song__template"></td>
-                </tr>
-            </template>
+<!--            <tr>-->
+<!--                <td id="table-singer__template"></td>-->
+<!--                <td id="table-group__template"></td>-->
+<!--                <td id="table-song__template"></td>-->
+<!--            </tr>-->
             </tbody>
         </table>
     </div>
@@ -53,7 +52,7 @@
             Добавить данные в таблицу
         </button>
         <div class="collapse container-dark" id="collapseExample">
-            <form name="form" role="form" class="form-horizontal" onsubmit="onSubmitFun()">
+            <form name="form_main" role="form" class="form-horizontal" onsubmit="onSubmitFun()">
                 <div class="mb-3">
                     <label for="singer" class="form-label">Исполнитель</label>
                     <input name="form_singer" class="form-control" type="text" placeholder="" id="singer"
@@ -66,7 +65,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="song" class="form-label">Песня</label>
-                    <input name="form_song" class="form-control" type="text" placeholder="" id="song" aria-label="default input example">
+                    <input name="form_song" class="form-control" type="text" placeholder="" id="song"
+                           aria-label="default input example">
                 </div>
                 <input type="submit" class="btn btn-default btn-primary" value="Добавить">
             </form>

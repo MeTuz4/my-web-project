@@ -4,10 +4,11 @@
 /*    margin: auto;*/
 /*}*/
 
-/*h1 {*/
-/*    color: aqua;*/
-/*}*/
 
-biography__youtube_link {
-    text-decoration: none;
+label {
+    color: aliceblue
+}
+
+.page-load-timer__element {
+    color: aliceblue
 }

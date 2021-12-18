@@ -18,7 +18,7 @@
 <body class="bg-dark">
 <section>
     <div class="table-responsive">
-        <table class="table table-dark table-bordered table-hover" id="music_table">
+        <table class="table table-dark table-bordered table-hover">
             <thead>
             <tr>
                 <th>Исполнитель</th>
@@ -26,7 +26,7 @@
                 <th>Песня</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="music_table">
             <tr>
                 <td>Виктор Цой</td>
                 <td>КИНО</td>
@@ -37,11 +37,13 @@
                 <td>Алиса</td>
                 <td>Инок, воин и шут</td>
             </tr>
-<!--            <tr>-->
-<!--                <td id="table-singer__template"></td>-->
-<!--                <td id="table-group__template"></td>-->
-<!--                <td id="table-song__template"></td>-->
-<!--            </tr>-->
+            <template id="tableEl-template">
+                <tr>
+                    <td id="table-singer__template"></td>
+                    <td id="table-group__template"></td>
+                    <td id="table-song__template"></td>
+                </tr>
+            </template>
             </tbody>
         </table>
     </div>
@@ -52,7 +54,7 @@
             Добавить данные в таблицу
         </button>
         <div class="collapse container-dark" id="collapseExample">
-            <form name="form_main" role="form" class="form-horizontal" onsubmit="onSubmitFun()">
+            <form name="form_main" role="form" class="form-horizontal" onsubmit="onSubmitFun(); return false;">
                 <div class="mb-3">
                     <label for="singer" class="form-label">Исполнитель</label>
                     <input name="form_singer" class="form-control" type="text" placeholder="" id="singer"
@@ -71,6 +73,7 @@
                 <input type="submit" class="btn btn-default btn-primary" value="Добавить">
             </form>
         </div>
+        <button type="button" class="btn btn-default btn-primary" onclick="clearAll(true)">Удалить всё</button>
     </section>
 
 </section>
